@@ -2,7 +2,7 @@
 
 Welcome to your personal Vim tutorial repository! This repository contains comprehensive resources to help you master Vim, from basic commands to advanced features.
 
-## 📚 Table of Contents
+## Table of Contents
 
 1. [Getting Started](#getting-started)
 2. [Core Concepts](#core-concepts)
@@ -11,7 +11,7 @@ Welcome to your personal Vim tutorial repository! This repository contains compr
 5. [Power User Tips](#power-user-tips)
 6. [Cheat Sheets](#cheat-sheets)
 
-## 🚀 Getting Started
+## Getting Started
 
 Vim is a highly configurable text editor built to enable efficient text editing. It's an improved version of the Vi editor distributed with most UNIX systems.
 
@@ -21,7 +21,7 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - **Visual Mode**: For selecting text
 - **Command Mode**: For executing commands
 
-## 💡 Core Concepts
+## Core Concepts
 
 ### Mode Switching
 - `Esc` or `Ctrl-[`: Return to Normal Mode
@@ -35,15 +35,30 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - `V`: Enter Visual Line Mode
 - `:`: Enter Command Mode
 
-### Basic Navigation
+### Navigation
 - `h`, `j`, `k`, `l`: Move cursor left, down, up, right
 - `w`: Move to next word
 - `b`: Move to previous word
 - `0`: Move to start of line
 - `$`: Move to end of line
 - `^`: Move to first non-blank character
+- `%`: Jump to matching bracket, parenthesis, or brace
+- `gg`: Go to the first line of the file
+- `G`: Go to the last line of the file
+- `H`: Move to the top of the screen
+- `M`: Move to the middle of the screen
+- `L`: Move to the bottom of the screen
+- `Ctrl + f`: Move forward one full screen
+- `Ctrl + b`: Move backward one full screen
+- `Ctrl + d`: Move forward half a screen
+- `Ctrl + u`: Move backward half a screen
+- `f<char>`: Move to next occurrence of `<char>` (character) in current line
+- `F<char>`: Move to previous occurrence of `<char>` in current line
+- `t<char>`: Move right before next occurrence of `<char>` in current line
+- `T<char>`: Move left before previous occurrence of `<char>` in current line
 
-## 📖 Essential Commands
+
+## Essential Commands
 
 ### File Operations
 - `:q` - Quit current buffer
@@ -71,7 +86,8 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - `?pattern` - Search backward
 - `n` - Next search result
 - `N` - Previous search result
-- `*` - Search word under cursor
+- `*` - Search forward for the word under the cursor
+- `#` - Search backward for the word under the cursor
 - `f<char>` - Find character forward
 - `F<char>` - Find character backward
 - `;` - Repeat last find forward
@@ -87,7 +103,7 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - `ge` - End of previous word
 - `gE` - End of previous WORD
 
-## 🔥 Advanced Operations
+## Advanced Operations
 
 ### Buffers and Windows
 - `:ls` - List buffers
@@ -152,7 +168,7 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - `"+y` - Yank to system clipboard
 - `"+p` - Paste from system clipboard
 
-## 💪 Power User Tips
+## Power User Tips
 
 ### Batch Processing
 ```vim
@@ -186,7 +202,7 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - `:cd <dir>` - Change directory
 - `:pwd` - Print working directory
 
-## 📋 Command Examples
+## Command Examples
 
 ### Combining Commands with Numbers
 - `d7j` - Delete from current line to 7 lines below (same as `7dj`)
@@ -236,7 +252,7 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - `"bP` - Paste contents of register 'b' before cursor
 - `"Ayy` - Yank current line and append to register 'a'
 
-## 🎯 Cheat Sheets
+## Cheat Sheets
 
 ### Quick Reference
 ![Vim Cheatsheet](Cheat%20Sheets/Vim-Cheatsheet-2-Final-Draft.png)
@@ -257,7 +273,7 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 
 ![Vim Cheat Sheet by Sysxplore](Cheat%20Sheets/Vim%20Cheet%20Sheet%20-%20by%20Sysxplore.jpg)
 
-## 📝 Practice Tips
+## Practice Tips
 
 1. Start with basic navigation and mode switching
 2. Practice common commands daily
@@ -285,7 +301,7 @@ The dotfiles include:
 - Git workflow optimizations
 - Various development tool configurations
 
-## 🎓 Learning Path
+## Learning Path
 
 1. **Beginner**
    - Basic navigation
@@ -305,4 +321,5 @@ The dotfiles include:
 
 
 Remember: Vim mastery comes with practice. Don't try to learn everything at once. Focus on incorporating new commands into your workflow gradually. 
+
 
