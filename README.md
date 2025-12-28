@@ -190,61 +190,72 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 
 ### Combining Commands with Numbers
 
-* `d7j` - Delete from current line to 7 lines below (same as `7dj`)
-
-* `d2w` - Delete two next words (same as `2dw`)
-* `3D` - Delete 3 lines
-* `de` - Delete current word to end
-* `d%` - Delete until first matching bracket/parenthesis
-* `3u` - Undo 3 last changes
-* `4Ctrl-r` - Redo 4 last changes
-* `3cw` - Change 3 words and enter Insert Mode
-* `2rm` - Replace 2 'm' characters with current character
-* `4x` - Delete 4 characters
-* `y5w` - Yank 5 words
+* `d7j` / `7dj` - Delete from current line to 7 lines below
+* `d2w` / `2dw` - Delete the next 2 words
+* `3D` - Delete 3 lines (from cursor to end of line)
+* `de` - Delete current word to the end
+* `d%` - Delete from cursor to matching bracket/parenthesis
+* `3u` - Undo last 3 changes
+* `4Ctrl-r` - Redo last 4 changes
+* `3cw` - Change next 3 words and enter Insert Mode
+* `2rm` - Replace next 2 'm' characters with the current character
+* `4x` - Delete 4 characters under cursor
+* `y5w` - Yank next 5 words
 * `3p` - Paste 3 times
 * `5.` - Repeat last command 5 times
+* `10j` - Move down 10 lines
+* `6k` - Move up 6 lines
+* `5>>` - Indent next 5 lines to the right
+* `3<<` - Indent next 3 lines to the left
 
 ### Line Commands
 
 * `dd` - Delete current line
-
-* `cc` - Replace current line and enter Insert Mode
-* `yy` - Copy current line
-* `4dd` - Delete 4 lines
-* `3cc` - Change 3 lines and enter Insert Mode
+* `cc` - Change current line and enter Insert Mode
+* `yy` - Yank (copy) current line
+* `4dd` - Delete 4 consecutive lines
+* `3cc` - Change 3 consecutive lines
 * `5yy` - Yank 5 lines
-* `3pp` - Paste 3 times
+* `3pp` - Paste yanked lines 3 times
+* `D` - Delete from cursor to end of line
+* `C` - Change from cursor to end of line and enter Insert Mode
 
 ### Indentation
 
-* `>>` - Indent to right
-
-* `<<` - Indent to left
-* `4>>` - 4 indentations to right
-* `2<<` - 2 indentations to left
+* `>>` - Indent current line right
+* `<<` - Indent current line left
+* `4>>` - Indent next 4 lines to the right
+* `2<<` - Indent next 2 lines to the left
+* `>` + motion - Indent text covered by motion
+* `<` + motion - Dedent text covered by motion
+* `=` + motion - Auto-indent text covered by motion
 
 ### Text Objects
 
-* `diw` - Delete inside word
-
+* `diw` - Delete inside current word
 * `dip` - Delete inside paragraph
 * `da(` - Delete around parentheses
 * `yip` - Yank inside paragraph
 * `yi(` - Yank inside parentheses
 * `di"` - Delete inside double quotes
-* `ca[` - Change around brackets
+* `ca[` - Change around brackets and enter Insert Mode
+* `di{` - Delete inside braces
+* `da"` - Delete around quotes
+* `ciw` - Change inside word
+* `ci(` - Change inside parentheses
 
 ### Registers
 
 * `"ayy` - Yank current line into register 'a'
-
 * `"byiw` - Yank current word into register 'b'
-* `"add` - Delete current line and store in register 'a'
-* `"bx` - Delete character under cursor and store in register 'b'
+* `"add` - Delete current line into register 'a'
+* `"bx` - Delete character under cursor into register 'b'
 * `"ap` - Paste contents of register 'a' after cursor
 * `"bP` - Paste contents of register 'b' before cursor
-* `"Ayy` - Yank current line and append to register 'a'
+* `"Ayy` - Append current line to register 'a'
+* `"0y` - Yank last inserted text into register '0'
+* `"+y` - Yank to system clipboard
+* `"+p` - Paste from system clipboard
 
 ## Cheat Sheets
 
