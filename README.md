@@ -2,6 +2,8 @@
 
 Welcome to your personal Vim tutorial repository! This repository contains comprehensive resources to help you master Vim, from basic commands to advanced features.
 
+> [For NeoVim in VS Code go here](./vscode/vscode-version-neovim.md).
+
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
