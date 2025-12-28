@@ -105,15 +105,39 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 - `Ctrl-o` - Go back in jump list
 - `Ctrl-i` - Go forward in jump list
 
-### Text Objects
-- `iw` - Inside word
-- `i"` - Inside quotes
-- `i(` - Inside parentheses
-- `i{` - Inside braces
-- `aw` - Around word
-- `a"` - Around quotes
-- `a(` - Around parentheses
-- `a{` - Around braces
+---
+> => Operator = what to do  
+> => Motion / Text Object = where to do it
+
+### Operatos 
+| Operator | Name                 |
+| -------- | -------------------- |
+| `d`      | delete               |
+| `c`      | change               |
+| `y`      | yank                 |
+| `>`      | shift right          |
+| `<`      | shift left           |
+| `=`      | indent               |
+| `g~`     | toggle case          |
+| `gu`     | lowercase            |
+| `gU`     | uppercase            |
+| `!`      | filter               |
+| `zf`     | fold                 |
+| `gq`     | format text          |
+| `gw`     | format (keep cursor) |
+| `~`      | toggle case (visual) |
+
+### Text Objects (Motions)
+> `[operator] + [text object]`
+>  `operator + (`i` | `a`) + object`
+- operator + `iw` - Inside word
+- operator + `i"` - Inside quotes
+- operator + `i(` - Inside parentheses
+- operator + `i{` - Inside braces
+- operator + `aw` - Around word
+- operator + `a"` - Around quotes
+- operator + `a(` - Around parentheses
+- operator + `a{` - Around braces
 
 ### Search and Replace
 - `:s/old/new` - Replace first occurrence
@@ -278,5 +302,6 @@ The dotfiles include:
    - Registers
    - Advanced search and replace
    - Custom mappings
+
 
 Remember: Vim mastery comes with practice. Don't try to learn everything at once. Focus on incorporating new commands into your workflow gradually. 
