@@ -128,8 +128,8 @@ Vim is a highly configurable text editor built to enable efficient text editing.
 | `~`      | toggle case (visual) |
 
 ### Text Objects (Motions)
-> `[operator] + [text object]`
->  `operator + (`i` | `a`) + object`
+> [operator] + [text object]    
+> [operator] + (`i` | `a`)    
 - operator + `iw` - Inside word
 - operator + `i"` - Inside quotes
 - operator + `i(` - Inside parentheses
@@ -305,3 +305,4 @@ The dotfiles include:
 
 
 Remember: Vim mastery comes with practice. Don't try to learn everything at once. Focus on incorporating new commands into your workflow gradually. 
+
