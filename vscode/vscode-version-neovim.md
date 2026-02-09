@@ -8,6 +8,7 @@
 - [Modes](#modes)
 - [Basic Cursor Navigation](#basic-cursor-navigation)
 - [Word & Text Navigation (Motions)](#word--text-navigation-motions)
+- [Sentence & Paragraph Navigation](#sentence--paragraph-navigation)
 - [Line Navigation & Jumps](#line-navigation--jumps)
 - [Editing & Operators](#editing--operators)
 - [Text Objects](#text-objects)
@@ -98,6 +99,22 @@
 | `[(` / `])`           | Jump to previous/next `(`             |
 | `g%`                  | Backward match for `%`                |
 
+## Sentence & Paragraph Navigation
+
+| Key                 | Action                              |
+| ------------------- | ----------------------------------- |
+| `(`                 | Previous sentence                   |
+| `)`                 | Next sentence                       |
+| `{`                 | Previous paragraph                  |
+| `}`                 | Next paragraph                      |
+
+**Examples with operators:**
+
+- `d}` - delete to end of paragraph
+- `c(` - change to previous sentence
+- `y)` - yank to next sentence
+- `d{` - delete to start of paragraph
+
 ## Line Navigation & Jumps
 
 | Key                 | Action                              |
@@ -128,7 +145,11 @@
 | `db`               | Delete to start of word                   |
 | `d$`               | Delete to end of line                     |
 | `d^`               | Delete to first non-blank                 |
+| `c^`               | Change from first non-blank               |
 | `dG`               | Delete to end of file                     |
+| `yG`               | Yank to end of file                       |
+| `:%y`              | Yank entire file                          |
+| `:%d`              | Delete entire file                        |
 | `dgg`              | Delete to start of file                   |
 | `cc`               | Change (replace) entire line              |
 | `C`                | Change to end of line                     |
@@ -229,6 +250,13 @@
 | `g*`             | Search partial word forward         |
 | `g#`             | Search partial word backward        |
 | `:noh`           | Clear search highlights             |
+
+**Search as motion (powerful!):**
+
+- `d/pattern<Enter>` - delete until pattern match
+- `c?pattern<Enter>` - change backward until pattern
+- `y/foo<Enter>` - yank until "foo"
+
 | `:%s/old/new/g`  | Replace all in file                 |
 | `:%s/old/new/gc` | Replace all with confirmation       |
 | `:s/old/new/g`   | Replace all in current line         |
@@ -271,6 +299,14 @@
 - `` `^ `` - last insert position
 - `` `[ `` `] `` - last change boundaries
 - `` `< `` `> `` - last visual selection
+
+**Operations between marks:**
+
+- `d'a` - delete from cursor to line of mark a
+- `d`a` - delete from cursor to exact position of mark a
+- `y'b` - yank from cursor to line of mark b
+- `y`b` - yank from cursor to exact position of mark b
+- `c'a` - change from cursor to line of mark a
 
 **Jump list:**
 
@@ -573,6 +609,13 @@ Examples:
 - `>3j` - indent current and 3 lines below
 - `gU2w` - uppercase 2 words
 - `=i{` - auto-indent inside braces
+
+**Numbered motions (alternative format):**
+
+- `5j` - move down 5 lines
+- `3w` - move forward 3 words
+- `20G` - go to line 20
+- `2f,` - find second comma on line
 
 ### Repeat Commands
 
