@@ -1,4 +1,3 @@
-
 # VSCode Neovim – Complete Keybindings Cheat Sheet
 
 > **Scope**: Neovim keybindings inside **VSCode** using the `vscode-neovim` extension.
@@ -44,7 +43,7 @@
 | `h j k l`           | Left / Down / Up / Right           |
 | `0` / `^` / `$`     | Line start / first non-blank / end |
 | `gg` / `G`          | First / last line                  |
-| `H M L`             | Top / middle / bottom of screen    |
+| `H M L`             | Top (High) / middle / bottom (Low) of screen    |
 | `Ctrl-d` / `Ctrl-u` | Half-page down / up                |
 | `Ctrl-f` / `Ctrl-b` | Full page down / up                |
 | `%`                 | Jump to matching bracket           |
